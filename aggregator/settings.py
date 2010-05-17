@@ -1,0 +1,1 @@
+NUMBER_OF_POSTS = 30

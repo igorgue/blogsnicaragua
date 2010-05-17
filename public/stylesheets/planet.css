@@ -1,0 +1,47 @@
+body {background-image:url('/images/logo.gif'); 
+background-repeat:no-repeat;
+padding:0px;
+margin:0px;
+padding-top:200px;
+padding-left:70px; 
+}
+
+h1, h2, h3, p, td, div, blockquote {font-family:Arial, Sans-serif;}
+
+h1 {font-size:30px; color:#fcb614; font-family:monospace;}
+
+div.daygroup {display:block; width:70%; }
+
+div.daygroup h2 {font-size:20px; color:#7cb238; font-family:monospace; margin:0px; margin-bottom:15px; background:#f3ffe5; padding:5px;}
+
+div.channelgroup {padding-left:20px; border:0px; border-left:1px solid #558026;}
+
+div.channelgroup h3 {font-size:20px; margin:0px; margin-bottom:15px; }
+
+div.channelgroup h3 a {color:#006df5; text-decoration:none;}
+
+div.entrygroup {padding:5px; border:1px dotted #00abef; margin-bottom:10px; font-size:11px;}
+
+div.entrygroup h4 {margin:0px; font-size:16px;}
+div.entrygroup h4 a {color:#00418f; text-decoration:none; border:0px; border-bottom:1px dotted #00418f;}
+
+div.entrygroup p {font-size:11px;}
+div.entrygroup p.date a {color:#00418f; text-decoration:none; border:0px; border-bottom:1px dotted #00418f;}
+
+a {color:#507d22;}
+
+div.sidebar {display:block; position: absolute; top:200px; right:0px; width:25%; }
+
+div.sidebar h2 {font-size:20px; color:#7cb238; font-family:monospace; margin:0px; margin-bottom:15px;}
+div.sidebar ul  {padding:0px;}
+div.sidebar li  {list-style:none; font-size:10px;}
+
+div.sidebar li  a {color:#00abef}
+
+div.sidebar li  a.message {color:#00418f}
+
+div.sidebar p {font-size:12px;}
+
+div.sidebar img {border:0px;}
+
+blockquote {font-family:monospace; background:#f0f0f0; padding:10px; border:0px; border-left:1px dotted #00418f; }
