@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html> 
+    <head> 
+        <title>Blogs Nicaragua: Nuestro Diario, Nuestras Voces</title> 
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+        <link rel="stylesheet" href="/stylesheets/style.css" type="text/css"> 
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" /> 
+        <!--<link rel="alternate" href="/atom.xml" title="" type="application/atom+xml"> -->
+    </head> 
+
+    <body> 
+        <h1>Nuestro Diario, Nuestras Voces</h1> 
+
+        {% block content %}
+        {% endblock %}
+
+        {% block sidebar %}
+        {% endblock %}
+
+        <!-- Google Analytics -->
+        <script type="text/javascript"> 
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script> 
+        <script type="text/javascript"> 
+            try {
+                var pageTracker = _gat._getTracker("UA-2930723-2");
+                pageTracker._trackPageview();
+            } catch(err) {}</script> 
+    </body> 
+
+</html> 

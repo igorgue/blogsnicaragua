@@ -18,5 +18,7 @@ urlpatterns = patterns('',
 # django static serve
 if settings.DEBUG:
     urlpatterns += patterns('',
-            (r'^media/(.*)$', 'django.views.static.serve', {'document_root': os.path.join(settings.PROJECT_PATH, 'public')}),
+            (r'^images/(.*)$', 'django.views.static.serve', {'document_root': os.path.join(settings.PROJECT_PATH, 'public/images')}),
+            (r'^javascripts/(.*)$', 'django.views.static.serve', {'document_root': os.path.join(settings.PROJECT_PATH, 'public/javascripts')}),
+            (r'^stylesheets/(.*)$', 'django.views.static.serve', {'document_root': os.path.join(settings.PROJECT_PATH, 'public/stylesheets')}),
     )

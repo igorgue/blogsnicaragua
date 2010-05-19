@@ -7,6 +7,18 @@ from libs import feedparser
 
 def index(request):
     """This gets the last NUMBER_OF_POSTS"""
-    posts = Post.objects.all().order_by('-created_at')[:NUMBER_OF_POSTS]
+    posts = dict()
 
-    return render_to_response('temp_index.html', locals())
+    def add_post(post):
+        """add a post to the dict"""
+        date = str(post.created_at.date())
+        if not date in posts:
+            posts[date] = []
+            posts[date].append(post)
+        else:
+            posts[date].append(post)
+
+    map(add_post, Post.objects.all().order_by('-created_at')[:NUMBER_OF_POSTS])
+    blogs = Blog.objects.all()
+
+    return render_to_response('index.html', {'posts': posts, 'blogs': blogs})

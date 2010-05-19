@@ -6,17 +6,12 @@
     </head>
     <body>
         <div id="content">
-            {% block content %}
-            {% for post in posts %}
-            <h1 class="article_title"><a href="{{ post.link }}">{{ post.title }}</a></h1>
-            <div class="article_content">
-                {{ post.content|safe }}
-            </div>
-            <div class="article_footer">
-                <p>{{ post.created_at }} by <a href="{{ post.blog.feed_url }}">{{ post.blog.title }}</a></p>
-            </div>
+            {% for date, post_group in posts.items %}
+                <p>{{ date }}</p>
+                {% for post in post_group %}
+                    <p>{{ post.title }}</p>
+                {% endfor %}
             {% endfor %}
-            {% endblock %}
         </div>
     </body>
 </html>
