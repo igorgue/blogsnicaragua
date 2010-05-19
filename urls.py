@@ -7,9 +7,14 @@ from django.conf import settings
 from django.contrib import admin
 admin.autodiscover()
 
+from aggregator.feeds import LatestPostsFeed
+
 urlpatterns = patterns('',
     # just one for now
     (r'^$', 'aggregator.views.index'),
+
+    # feeds
+    (r'^feeds/$', LatestPostsFeed()),
 
     # Uncomment the next line to enable the admin:
     (r'^admin/', include(admin.site.urls)),

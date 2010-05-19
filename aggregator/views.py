@@ -18,7 +18,7 @@ def index(request):
         else:
             posts[date].append(post)
 
-    map(add_post, Post.objects.all().order_by('-created_at')[:NUMBER_OF_POSTS])
+    map(add_post, Post.objects.order_by('-created_at')[:NUMBER_OF_POSTS])
     blogs = Blog.objects.all()
 
     return render_to_response('index.html', {'posts': posts, 'blogs': blogs})
